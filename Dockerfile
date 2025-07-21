@@ -30,7 +30,8 @@ WORKDIR /app
 COPY --from=builder /app/main .
 
 # !!! ИЗМЕНЕНИЕ ЗДЕСЬ: КОПИРУЕМ frame.png ИЗ КОНТЕКСТА СБОРКИ, А НЕ ИЗ БИЛДЕРА
-COPY frame.png . # Убедитесь, что frame.png находится в той же директории, что и Dockerfile
+COPY frame.png .
+ # Убедитесь, что frame.png находится в той же директории, что и Dockerfile
 
 # Определение порта, который будет слушать приложение
 ENV PORT 8080
